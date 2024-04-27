@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='Web\Assets\CSS\registration.css') }}">
+  <meta http http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Карточная буря</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="register.html" method="post">
+                    <h2>Регистрация</h2>
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="login" name="login" required>
+                        <label for="">Имя</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" required>
+                        <label for="">Почта</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="pass" required>
+                        <label for="">Пароль</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Запомнить меня</label>
+                      
+                    </div>
+                    <button>Зарегистрироваться</button>
+                    <div class="register">
+                        <p>Есть аккаунт <a href="{{ url_for('login') }}">Войти</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+

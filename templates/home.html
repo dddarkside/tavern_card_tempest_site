@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Карточная Буря</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/fbb22ad09d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Assets\images\icons\icon_tab.jpg">
+  </head>
+  <body>
+
+    <header class="header" id="header">
+      <div class="container">
+          <div class="header__inner">
+            <div class="header__logo" data-scroll="#intro">Карточная Буря</div>
+
+            <nav class="nav" id="nav">
+              <a class="nav__link" href="#" data-scroll="#about">О ТАВЕРНЕ</a>
+              <a class="nav__link" href="#" data-scroll="#social">СОЦ. СЕТИ</a>
+              <a class="nav__link" href="#" data-scroll="#meetings">НАШИ ВСТРЕЧИ</a>
+              <a class="nav__link" href="#" data-scroll="#admins">АДМИНИСТРАЦИЯ</a>
+              <a class="nav__link" href="{{ url_for('registration') }}"><i class="fa-solid fa-user"></i>Аккаунт</a>
+                </nav>
+
+                <button class="nav-toggle" id="nav_toggle" type="button">
+                  <span class="nav-toggle__item">Menu</span>
+                </button>
+
+          </div>
+      </div>
+    </header>
+    
+    <div class="intro" id="intro">
+      <div class="container">
+        <div class="intro__inner">
+          <h2 class="intro__suptitle">Будь как дома,</h2>
+          <h1 class="intro__title">путник!</h1>
+
+          <a class="btn" href="#" data-scroll="#about">Узнать Больше</a>
+        </div>
+      </div>
+
+      <div class="slider">
+        <div class="container">
+          <div class="slider__inner">
+        <div class="slider__item active">
+          <span class="slider__num">01</span>
+          <a class="slider__text" href="home.html">ТАВЕРНА</a>
+        </div>
+        <div class="slider__item">
+          <span class="slider__num">02</span>
+          <a class="slider__text" href="campaigns.html">КАМПАНИИ</a>
+        </div>
+        <div class="slider__item">
+          <span class="slider__num">03</span>
+          <a class="slider__text" href="worlds.html">МИРЫ</a>
+        </div>
+        <div class="slider__item">
+          <span class="slider__num">04</span>
+          <a class="slider__text" href="">ТАВЕРНА</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div><!-- /.intro -->
+
+  <!--About-->
+<section class="section" id="about">
+  <div class="container">
+
+    <div class="section__header">
+      <h3 class="section__suptitle">Что мы делаем</h3>
+      <h2 class="section__title">НЕМНОГО О НАС</h2>
+      <div class="section__text">
+        <p>Доходили ли до тебя речи о Таверне «Карточная Буря»?
+        О сообществе, которое любит играть в настольные игры, НРИ и видеоигры.
+        <br><br>Когда солнце близится к закату и многие дела закончены — Карточная буря оживает.
+        Ты можешь найти себе новых друзей или собраться со старыми товарищами
+        и проверить себя на прочность в компьютерных играх
+        аль вновь вдохнуть жизнь в своих персонажей под строгим надзором GM'a
+        в мирах D&D и не только.
+        <br><br>Периодически мы проводим встречи в игротеках,
+        где играем в настольные игры такие как Бэнг, Мафия,
+        Нечто, Бункер и в многие другие. И за счет того, что у нас есть договоренности,
+        посещение игротеки с нами будет дешевле и веселее!<br><br>Мы набираем в
+        свои ряды профессиональных зрителей:
+        тех, кто сможет узреть все сакральные смыслы и решить загадки.
+        Мы приветствуем критику: разумеется, если она подкреплена фактами. Ну как?
+        Зайдёшь осмотреться?</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="/static/images/About/about_1.jpg" alt="">
+        </div>
+        <div class="card__text">Встречи</div>
+      </div>
+    </div>
+
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="/static/images/About/about_2.jpg" alt="">
+        </div>
+        <div class="card__text">Сообщество</div>
+      </div>
+    </div>
+
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="/static/images/About/about_3.jpg" alt="">
+        </div>
+        <div class="card__text">НРИ</div>
+      </div>
+    </div>
+    </div>
+
+  </div> <!-- /.container -->
+
+</section>
+
+<!--Stats-->
+<div class="statistics">
+  <div class="container">
+    <div class="stat">
+      <div class="stat__item">
+        <div class="stat__count">>100</div>
+        <div class="stat__text">Участников дискорда</div>
+      </div>
+      <div class="stat__item">
+        <div class="stat__count">19</div>
+        <div class="stat__text">Встреч вживую</div>
+      </div>
+      <div class="stat__item">
+        <div class="stat__count">36</div>
+        <div class="stat__text">Подписчиков<br>на YouTube</div>
+      </div>
+      <div class="stat__item">
+        <div class="stat__count">∞</div>
+        <div class="stat__text">Хорошего настроения</div>
+      </div>
+      <div class="stat__item">
+        <div class="stat__count">+1</div>
+        <div class="stat__text">Новый посетитель<br>и это ты!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div><!-- /.link -->
+
+  <!--Social links-->
+  <section class="section" id="social">
+    <div class="container">
+  
+      <div class="section__header">
+        <h3 class="section__suptitle">Где нас можно найти</h3>
+        <h2 class="section__title">Полезные ссылки</h2>
+      </div>
+  
+      <div class="links">
+        <div class="links__item  links__item--border">
+          <img class="links__icon" src="/static/images/icons/icon_discord.png" alt="">
+  
+          <div><a class="links__title" href="https://discord.gg/AAMw8UJCj5">Discord</a></div>
+          <div class="links__text">Сообщество в дискорд, где можно пообщаться и поиграть вместе с нами.</div>
+        </div>
+  
+        <div class="links__item  links__item--border">
+          <img class="links__icon" src="Assets\images\icons\icon_youtube.png" alt="">
+  
+          <div><a class="links__title" href="https://www.youtube.com/@TavernCardTempest">Youtube</a></div>
+          <div class="links__text">Канал на ютубе, где мы выкладывают записи игр по настольным ролевым.</div>
+        </div>
+  
+        <div class="links__item  links__item--border">
+          <img class="links__icon" src="Assets\images\icons\twitch.png" alt="">
+  
+          <div><a class="links__title" href="https://www.twitch.tv/tavern_card_tempest">Twitch</a></div>
+          <div class="links__text">Канал на твиче, где мы в прямом эфире играем в настольные ролевые игры.</div>
+          </div>
+
+          <div class="links__item">
+            <img class="links__icon" src="Assets\images\icons\boosty.png" alt="">
+    
+            <div><a class="links__title" href="">Boosty</a></div>
+            <div class="links__text">Если вам нравятся наши видео и стримы, то при желании можете поддержать нас звонкой монетой!</div>
+          </div>
+    
+          <div class="links__item">
+            <img class="links__icon" src="Assets\images\icons\VKontakte.png" alt="">
+    
+            <div><a class="links__title" href="https://vk.com/taverncardtempest">Вконтакте</a></div>
+            <div class="links__text">Группа во Вконтакте, где выкладываются различные посты с мемами с игр,
+              уведомления об играх и многое другое!
+            </div>
+          </div>
+    
+          <div class="links__item">
+            <img class="links__icon" src="Assets\images\icons\telegram.png" alt="">
+    
+            <div><a class="links__title" href="">Telegram</a></div>
+            <div class="links__text">Площадка, где мы выкладываем разные интересные вещи и новости не только таверны!</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Video-->
+<section class="section section--videos">
+  <div class="container">
+
+    <div class="section__header">
+      <h3 class="section__suptitle">Наш YouTube</h3>
+      <h2 class="section__title">В главных ролях!</h2>
+    </div> 
+
+    <div class="videos">
+      <iframe class="videos__item" src="https://www.youtube.com/embed/CkVVAZMUM8g"></iframe>
+    </div>
+
+      </div><!--/.container-->
+</section>
+
+<!--Meetings-->
+<section class="section"  id="meetings">
+  <div class="container">
+
+    <div class="section__header">
+      <h3 class="section__suptitle">Наши встречи</h3>
+      <h2 class="section__title">Карточные бури!</h2>
+    
+    <div class="section__text">
+      <p>Мы проводим встречи вживую в игротеках, где играем в различные настольные игры и не только!
+        Такие встречи мы называем Бурями, и здесь
+        вы можете увидеть отголоски таких Бурь!
+      </p>
+    </div>
+  </div>
+
+  </div><!--/.container-->
+
+  <div class="meetings">
+    <div class="meetings__col">
+      <div class="meetings__item">
+        <img class="meetings__image" src="/static/images/Meetings/one.jpg" alt="">
+        <div class="meetings__info">
+          <div class="meetings__title">Девятнадцатая Буря</div>
+          <div class="meetings__text"></div>
+        </div>
+      </div>
+      <div class="meetings__item">
+        <img class="meetings__image" src="/static/images/Meetings/two.jpg" alt="">
+        <div class="meetings__info">
+          <div class="meetings__title">Четырнадцатая Буря</div>
+          <div class="meetings__text"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="meetings__col">
+      <div class="meetings__item">
+        <img class="meetings__image" src="/static/images/Meetings/three.jpg" alt="">
+        <div class="meetings__info">
+          <div class="meetings__title">Семнадцатая Буря</div>
+          <div class="meetings__text"></div>
+        </div>
+      </div>
+      <div class="meetings__item">
+        <img class="meetings__image" src="/static/images/Meetings/four.jpg" alt="">
+        <div class="meetings__info">
+          <div class="meetings__title">Восьмая Буря</div>
+          <div class="meetings__text"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="meetings__col">
+      <div class="meetings__item">
+        <img class="meetings__image" src="/static/images/Meetings/five.jpg" alt="">
+        <div class="meetings__info">
+          <div class="meetings__title">Десятая Буря</div>
+          <div class="meetings__text"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="meetings__col">
+      <div class="meetings__item">
+        <img class="meetings__image" src="/static/images/Meetings/six.png" alt="">
+        <div class="meetings__info">
+          <div class="meetings__title">Уведомление в дискорде</div>
+          <div class="meetings__text"></div>
+        </div>
+      </div>
+      <div class="meetings__item">
+        <img class="meetings__image" src="/static/images/Meetings/seven.jpg" alt="">
+        <div class="meetings__info">
+          <div class="meetings__title">Седьмая Буря</div>
+          <div class="meetings__text"></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.Meetings -->
+</section>
+
+<!--Admins-->
+<section class="section"  id="admins">
+  <div class="container">
+    <div class="section__header">
+      <h3 class="section__suptitle">Кто мы</h3>
+      <h2 class="section__title">Администрация</h2>
+      <div class="section__text">
+        <p>Это те, кто непокладая рук создает для вас множество контента. Это и новые миры с механиками
+           для НРИ, и встречи вживую в игратеках, и конечно же потрясающие видео на ютуб!
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\Nikita.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="https://vk.com/yaseigg" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">Никита Сиротин (Тачик)</div>
+        <div class="card__prof">Первый Тиун</div>
+      </div><!-- /.card__item -->
+
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\Saveliy.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="https://vk.com/frit0thefox" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">Савелий Карпешин (Фрито)</div>
+        <div class="card__prof">Идейный вдохновитель</div>
+      </div><!-- /.card__item -->
+
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\Viktor.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="https://vk.com/eskelior" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">Виктор Дмитриев (Акрейм)</div>
+        <div class="card__prof">Второй Тиун</div>
+      </div><!-- /.card__item -->
+
+    </div><!-- /.card_1 -->
+
+
+    <div class="card">
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\Nameless.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">Безымянный</div>
+        <div class="card__prof">Писарь</div>
+      </div><!-- /.card__item -->
+
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\Fiofan.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">Артем Михайлов (Fiofan)</div>
+        <div class="card__prof">Хозяин Таверны</div>
+      </div><!-- /.card__item -->
+
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\LGM.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">ЛГМ</div>
+        <div class="card__prof">Главный ведущий НРИ</div>
+      </div><!-- /.card__item -->
+
+    </div><!-- /.card_2 -->
+
+    <div class="card">
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\lilenia.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">Анастасия Леонтьева (Лиления Корнин)</div>
+        <div class="card__prof">Художница</div>
+      </div><!-- /.card__item -->
+
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\Ibri.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">Ибри Регис</div>
+        <div class="card__prof">Выверщик</div>
+      </div><!-- /.card__item -->
+
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\Arfasya.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">Анастасия (Арфасия)</div>
+        <div class="card__prof">Художница</div>
+      </div><!-- /.card__item -->
+
+    </div><!-- /.card_3 -->
+
+    <div class="card">
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\Launaft.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="https://www.youtube.com/channel/UCErD6697ddA1g1KZ4IrVPnA" target="_blank">
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">Дмитрий Богданов (Launaft)</div>
+        <div class="card__prof">Видеомонтажер</div>
+      </div><!-- /.card__item -->
+
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\Nine.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">Александр Обидин (Девятый)</div>
+        <div class="card__prof">Корчмарь</div>
+      </div><!-- /.card__item -->
+
+      <div class="card__item">
+        <div class="card__inner">
+        <div class="card__img">
+          <img src="Assets\images\Admins\Anais.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <div class="social">
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class="social__item" href="#" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card__info"></div>
+        <div class="card__name">Анна Липко (Анаис)</div>
+        <div class="card__prof">Рассказчица</div>
+      </div><!-- /.card__item -->
+
+    </div><!-- /.card_4 -->
+
+
+  </div><!-- /.container -->
+</section>
+
+<!--Footer-->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer__inner">
+      <div class="footer__col footer__col--first">
+        <div class="footer__logo">Карточная Буря</div>
+        <div class="footer__text">
+        Мы рады каждому, кто присоединиться к нашей таверне!
+        </div>
+        <div class="footer__social">
+          <div class="footer__social-header">
+            <b>>100</b> участников
+          </div>
+          <div class="footer__social-content">
+            Следите за нами:
+            <a href="https://discord.gg/AAMw8UJCj5" target="_blank">
+              <i class="fa-brands fa-discord"></i>
+            </a>
+            <a href="https://vk.com/taverncardtempest" target="_blank">
+              <i class="fa-brands fa-vk"></i>
+            </a>
+            <a href="https://www.youtube.com/@TavernCardTempest" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.twitch.tv/tavern_card_tempest" target="_blank">
+              <i class="fa-brands fa-twitch"></i>
+            </a>
+          </a>
+          <!--<a href="#" target="_blank">
+            <i class="fa-brands fa-telegram"></i>
+          </a>--> 
+          </div>
+        </div>
+        <img class="footer__gif" src="/static/images/Footer/run.gif" alr="">
+        </div>
+
+        <div class="footer__col footer__col--second">
+          <div class="footer__title">Кампании НРИ</div>
+
+            <div class="campaigns">
+
+              <div class="campaigns__item">
+                <img class="campaigns__img" src="/static/images/Footer/Campaigns/Hyens.gif" alt="">
+                <div class="campaigns__content">
+                  <a class="campaigns__title" href="">Смех Гиен</a>
+                  <div class="campaigns__game">D&D 5e</div>
+                </div>
+              </div>
+
+              <div class="campaigns__item">
+                <img class="campaigns__img" src="/static/images/Footer/Campaigns/scifi.jpg" alt="">
+                <div class="campaigns__content">
+                  <a class="campaigns__title" href="">На той стороне...</a>
+                  <div class="campaigns__game">Stars without number</div>
+                </div>
+              </div>
+
+              <div class="campaigns__item">
+                <img class="campaigns__img" src="/static/images/Footer/Campaigns/Burn.png" alt="">
+                <div class="campaigns__content">
+                  <a class="campaigns__title" href="">Неугасающее пламя</a>
+                  <div class="campaigns__game">D&D 5e</div>
+                </div>
+              </div>
+
+            </div><!-- /.Campaigns-->
+
+        </div>
+
+        <div class="footer__col footer__col--third">
+          <div class="footer__title">Друзья</div>
+
+          <div class="friends">
+            <a class="friends__item" href="#" target="_blank">
+              <img class="friends__img" src="/static/images/Footer/Friends/PinkDice.jpg" alr="">
+              <div class="friends__info">
+                <div class="friends__title">Pink Dice</div>
+              </div>
+            </a>
+
+            <a class="friends__item" href="#" target="_blank">
+              <img class="friends__img" src="/static/images/Footer/Friends/friends.jpg" alr="">
+              <div class="friends__info">
+                <div class="friends__title">Друг</div>
+              </div>
+            </a>
+
+            <a class="friends__item  friends__item--third" href="#" target="_blank">
+              <img class="friends__img" src="/static/images/Footer/Friends/friends.jpg" alr="">
+              <div class="friends__info">
+                <div class="friends__title">Друг</div>
+              </div>
+            </a>
+
+            <a class="friends__item" href="#" target="_blank">
+              <img class="friends__img" src="/static/images/Footer/Friends/friends.jpg" alr="">
+              <div class="friends__info">
+                <div class="friends__title">Друг</div>
+              </div>
+            </a>
+
+            <a class="friends__item" href="#" target="_blank">
+              <img class="friends__img" src="/static/images/Footer/Friends/friends.jpg" alr="">
+              <div class="friends__info">
+                <div class="friends__title">Друг</div>
+              </div>
+            </a>
+
+            <a class="friends__item  friends__item--third" href="#" target="_blank">
+              <img class="friends__img" src="/static/images/Footer/Friends/friends.jpg" alr="">
+              <div class="friends__info">
+                <div class="friends__title">Друг</div>
+              </div>
+            </a>
+
+            <a class="friends__item" href="#" target="_blank">
+              <img class="friends__img" src="/static/images/Footer/Friends/friends.jpg" alr="">
+              <div class="friends__info">
+                <div class="friends__title">Друг</div>
+              </div>
+            </a>
+
+            <a class="friends__item" href="#" target="_blank">
+              <img class="friends__img" src="/static/images/Footer/Friends/friends.jpg" alr="">
+              <div class="friends__info">
+                <div class="friends__title">Друг</div>
+              </div>
+            </a>
+
+            <a class="friends__item  friends__item--third" href="#" target="_blank">
+              <img class="friends__img" src="/static/images/Footer/Friends/friends.jpg" alr="">
+              <div class="friends__info">
+                <div class="friends__title">Друг</div>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+
+    </div> <!--/.footer__inner-->
+
+    <div class="copyright">
+      © 2016 MoGo free PSD template by <span>Laaqiq</span>.
+    </div>
+
+  </div> <!-- Container -->
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<script src="/static/js/app.js"></script>
+
+  </body>
+</html>
