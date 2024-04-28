@@ -377,7 +377,7 @@ hr {
 }
 
 .section--videos{
-  background: url("../images/tavern_background.jpg") center no-repeat;
+  background: url("/static/images/tavern_background.jpg") center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
