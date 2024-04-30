@@ -5,15 +5,15 @@ DROP TABLE IF EXISTS auth;
 
 -- Создание таблицы users
 CREATE TABLE IF NOT EXISTS users (
-    id INT PRIMARY KEY,
-    mail VARCHAR(255),
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    mail VARCHAR(255) UNIQUE,
     name VARCHAR(255)
 );
 
 -- Создание таблицы events
 CREATE TABLE IF NOT EXISTS events (
-    id INT PRIMARY KEY,
-    name VARCHAR(255),
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(255) UNIQUE,
     date DATE,
     participants INT[]
 );

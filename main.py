@@ -7,7 +7,6 @@ def start():
     return redirect(url_for('home'))
 
 def home():
-    print("CPAKA")
     if request.method == "POST":
         return auth()
     return render_template("home.html")
@@ -24,13 +23,17 @@ def login():
 
 def auth():
     '''Функция аутентификации'''
-    mail = request.form.get('email')
-    password = request.form.get('password')
+    session['auth_mail'] = request.form.get('email')
+    session['auth_pass'] = request.form.get('password')
     db_open()
-    id = db_do(f"select id from users where mail='{mail}'")
-    if id:
-        if password == db_do(f"select * from auth where id='{id}'"):
-            session['user'] = mail
+    session['auth_id'] = db_do(f"select id from users where mail='{session['auth_mail']}'")
+    if session['auth_id']:
+        session['auth_pass_true'] = db_do(f"select * from auth where id={session['auth_id'][0]}")
+        if not session['auth_pass_true']:
+            return redirect(url_for('login'))  # Нет такого пользователя
+        
+        if session['auth_pass'] == session['auth_pass_true'][1]:
+            session['user'] = session['auth_mail']
             return redirect(url_for('home'))
     return redirect(url_for('login'))
             
@@ -40,5 +43,7 @@ app.add_url_rule('/', 'start', start)
 app.add_url_rule('/home', 'home', home,  methods=['post', 'get'])
 app.add_url_rule('/registration', 'registration', registration)
 app.add_url_rule('/login', 'login', login)
+
+app.config['SECRET_KEY'] = 'ThisIsSecretSecretSecretKey'
 
 app.run()
